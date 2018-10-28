@@ -17,7 +17,7 @@ from model.training import train_and_evaluate
 parser = argparse.ArgumentParser()
 parser.add_argument('--model_dir', default = 'experiments/test', 
                     help = "loading params.json")
-parser.add_argument('--data_dir', default = 'data/Training/ISIC2018_Task1_Training_shrink',
+parser.add_argument('--data_dir', default = '../data/Training/ISIC2018_Task1_Training_shrink',
                     help = "Dictory containing the dataset")
 parser.add_argument('--restore_from', default=None,
                     help = "Optional, directory or file containing weights to reload before training")
