@@ -38,4 +38,4 @@ params.optimizer{"momentum", "adam"}
 ## **TODO**
 
 - [x] Finish Unet Structure in 10-14-2018
-- [ ] 
+- [x] 
