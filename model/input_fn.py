@@ -11,7 +11,7 @@ def _parse_function(filename, mask_filename, size):
     """
     image_string = tf.read_file(filename)
     mask_string = tf.read_file(mask_filename)
-g
+
     # Don't use tf.image.decode_image, or the output shape will be undefined
     image_decoded = tf.image.decode_jpeg(image_string, channels=3)
     mask_decoded = tf.image.decode_png(mask_string, channels=1)
