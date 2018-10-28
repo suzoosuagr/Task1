@@ -1,0 +1,35 @@
+{
+    "learning_rate": 1e-3,
+    "batch_size": 32,
+    "num_epochs": 10,
+    "num_channels": 16,
+    "use_batch_norm": true,
+    "bn_momentum": 0.9,
+    "image_size": [
+        300,
+        226
+    ],
+    "use_random_flip": true,
+    "num_labels": 1,
+    "num_parallel_calls": 4,
+    "save_summary_steps": 1,
+    "keep_prob": 0.5,
+    "num_layers": 4,
+    "filter_height": 3,
+    "filter_width": 3,
+    "stride_y": 1,
+    "stride_x": 1,
+    "pool_size":2,
+
+    "cost_type":"dice_coefficient",
+    "regularizer": false,
+    
+    "optimizer":"adam",
+    "decay_steps":10,
+    "learning_rate_f_momentum":0.2,
+    "decay_rate":0.95,
+    "momentum":0.2,
+
+    "Net_type":"Unet_laplacian",
+    "threshold": 0.5
+}
