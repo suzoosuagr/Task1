@@ -37,6 +37,5 @@ params.optimizer{"momentum", "adam"}
 
 ## **TODO**
 
-- [ ] Finish Unet Structure in 10-14-2018
-- [ ] after work done , check random process to really understand [batch normalization](https://arxiv.org/pdf/1502.03167.pdf)
+- [x] Finish Unet Structure in 10-14-2018
 - [ ] 
