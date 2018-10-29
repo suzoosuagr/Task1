@@ -747,3 +747,48 @@ Using SoftDice
 Using SoftDice
 
 2018-10-28 17:46:00,040:CRITICAL: This is with Laplacian feature!  щ(ﾟДﾟщ)
+2018-10-29 00:27:46,663:INFO: Creating the datasets...
+2018-10-29 00:28:13,744:INFO: Creating the datasets...
+2018-10-29 00:28:14,789:INFO: Creating the model...
+2018-10-29 00:28:14,790:INFO: Layers: 4, channels_root: 16, image_size: [300, 226], num_epochs: 10
+
+2018-10-29 00:28:14,791:INFO: Loss_function: dice_coefficient, Regularization:False, Optimizer: adam, Net_type: Unet_laplacian
+2018-10-29 00:28:14,793:CRITICAL: Using Thres={threshold} -> pred
+Using SoftDice
+
+2018-10-29 00:28:14,794:CRITICAL: This is with Laplacian feature!  щ(ﾟДﾟщ)
+2018-10-29 00:28:23,550:INFO: Layers: 4, channels_root: 16, image_size: [300, 226], num_epochs: 10
+
+2018-10-29 00:28:23,550:INFO: Loss_function: dice_coefficient, Regularization:False, Optimizer: adam, Net_type: Unet_laplacian
+2018-10-29 00:28:23,551:CRITICAL: Using Thres={threshold} -> pred
+Using SoftDice
+
+2018-10-29 00:28:23,552:CRITICAL: This is with Laplacian feature!  щ(ﾟДﾟщ)
+2018-10-29 00:28:24,783:INFO: Starting training for 10 epoch(s)
+2018-10-29 00:28:28,427:INFO: Epoch 1/10
+2018-10-29 00:28:28,427:INFO: iterrator_initialized  ヾ(=･ω･=)o
+2018-10-29 00:28:37,308:INFO: - Train metrics: accuracy: 0.397 ; loss: 1081826.000
+2018-10-29 00:28:38,704:INFO: - Eval metrics: accuracy: 0.372 ; loss: 155158.625
+2018-10-29 00:28:39,261:INFO: - Found new best accuracy, saving in Task1/experiments/test/best_weights/after-epoch-1
+2018-10-29 00:28:39,264:INFO: Epoch 2/10
+2018-10-29 00:28:39,265:INFO: iterrator_initialized  ヾ(=･ω･=)o
+2018-10-29 00:46:34,874:INFO: Creating the datasets...
+2018-10-29 00:46:35,419:INFO: Creating the model...
+2018-10-29 00:46:35,421:INFO: Layers: 4, channels_root: 16, image_size: [300, 226], num_epochs: 10
+
+2018-10-29 00:46:35,422:INFO: Loss_function: dice_coefficient, Regularization:False, Optimizer: adam, Net_type: Unet_laplacian
+2018-10-29 00:46:35,423:CRITICAL: Using Thres={threshold} -> pred
+Using SoftDice
+
+2018-10-29 00:46:35,423:CRITICAL: This is with Laplacian feature!  щ(ﾟДﾟщ)
+2018-10-29 00:46:41,537:INFO: Layers: 4, channels_root: 16, image_size: [300, 226], num_epochs: 10
+
+2018-10-29 00:46:41,538:INFO: Loss_function: dice_coefficient, Regularization:False, Optimizer: adam, Net_type: Unet_laplacian
+2018-10-29 00:46:41,539:CRITICAL: Using Thres={threshold} -> pred
+Using SoftDice
+
+2018-10-29 00:46:41,540:CRITICAL: This is with Laplacian feature!  щ(ﾟДﾟщ)
+2018-10-29 00:46:42,610:INFO: Starting training for 10 epoch(s)
+2018-10-29 00:46:45,845:INFO: Epoch 1/10
+2018-10-29 00:46:45,846:INFO: iterrator_initialized  ヾ(=･ω･=)o
+2018-10-29 00:46:56,242:INFO: - Train metrics: accuracy: 0.398 ; loss: 1082567.625

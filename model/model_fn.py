@@ -1,8 +1,11 @@
 import tensorflow as tf
 from model.unet import Build_Unet
-from model.L_Unet import Build_L_Unet
 from model.unet import _get_cost
 from model.unet import _get_optimizer
+
+from model.L_Unet import Build_L_Unet
+from model.L_Unet import _get_cost_L
+from model.L_Unet import _get_optimizer_L
 
 def model_fn(mode, inputs, params, reuse=False):
     """Model function defining the graph operations.
@@ -32,7 +35,11 @@ def model_fn(mode, inputs, params, reuse=False):
         class_weight = {}
         # using pixel wise softmax to get the result. 
         _Variables = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, scope='model')
-        loss = _get_cost(logits, masks, params, class_weight, _Variables)
+
+        if params.Net_type == "Unet_ort":
+            loss = _get_cost(logits, masks, params, class_weight, _Variables)
+        else:
+            loss = _get_cost_L(logits, masks, params, class_weight, _Variables)
         # gradients_node = tf.gradients(loss, _Variables)
         probs = tf.nn.sigmoid(logits)
         predictions = tf.cast((probs > params.threshold), tf.float32)
@@ -45,7 +52,10 @@ def model_fn(mode, inputs, params, reuse=False):
 
     # Define training step that minimizes the loss with the Adam optimizer
     if is_training:
-        optimizer, decay_learning_rate = _get_optimizer(loss, params)
+        if params.Net_type == "Unet_ori":
+            optimizer, decay_learning_rate = _get_optimizer(loss, params)
+        else:
+            optimizer, decay_learning_rate = _get_optimizer_L(loss, params)
         if params.use_batch_norm:
             # Add a dependency to update the moving mean and variance for batch normalization
             with tf.control_dependencies(tf.get_collection(tf.GraphKeys.UPDATE_OPS)):
