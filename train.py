@@ -88,7 +88,7 @@ if __name__ == '__main__':
     assert not overwritting, "weights found in model_dir, aborting to avoid overwrite"
 
     # Set the logger
-    set_logger(os.path.join(args.model_dir, 'train.log'))
+    set_logger(os.path.join("../", 'train.log'))
 
     # Create the input data pipeline
     logging.info("Creating the datasets...")
@@ -124,7 +124,7 @@ if __name__ == '__main__':
     eval_inputs = input_fn(False, eval_filenames, eval_masks_filenames, params)
 
     # Define the model
-    logging.info("Creating the model...")
+    logging.info("Creating the model from {}".format(args.model_dir))
     train_model_spec = model_fn('train', train_inputs, params)
     eval_model_spec = model_fn('eval', eval_inputs, params, reuse=True)
 

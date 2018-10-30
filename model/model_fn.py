@@ -70,7 +70,8 @@ def model_fn(mode, inputs, params, reuse=False):
     with tf.variable_scope("metrics"):
         metrics = {
             'accuracy': tf.metrics.accuracy(labels=masks, predictions=predictions),
-            'loss': tf.metrics.mean(loss)
+            'loss': tf.metrics.mean(loss),
+            'IoU':tf.metrics.mean_iou(labels=masks, predictions=predictions, num_classes=2)
         }
 
     # Group the update ops for the tf.metrics
